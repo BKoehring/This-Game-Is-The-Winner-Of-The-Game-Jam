@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=6 format=3 uid="uid://fdlqojtnuyek"]
 
 [ext_resource type="Texture2D" path="res://Tilesets/Room.png" id="1_8p7m5"]
 [ext_resource type="Texture2D" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
+=======
+[gd_scene load_steps=6 format=3 uid="uid://b570xmm1blvho"]
+
+[ext_resource type="Texture2D" uid="uid://cv4d6ma1o823w" path="res://Tilesets/Room.png" id="1_8p7m5"]
+[ext_resource type="Texture2D" uid="uid://dohcxcbeqyde0" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
+>>>>>>> Stashed changes
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v6rj"]
 texture = ExtResource("1_8p7m5")
