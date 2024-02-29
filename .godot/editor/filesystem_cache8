@@ -1,16 +1,3 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709247875
+::res://::1709176955
 icon.svg::CompressedTexture2D::2941139671096915662::1709176882::1709176894::1::::<><>::
-Room.tscn::PackedScene::4559705729043928568::1709247161::0::1::::<><>::uid://cv4d6ma1o823w::::res://Tilesets/Room.png
-::res://addons/::1709177008
-::res://addons/godot-git-plugin/::1709177008
-git_plugin.gdextension::GDExtension::-1::1709177008::0::1::::<><>::
-plugin.cfg::TextFile::-1::1709177008::0::1::::<><>::
-THIRDPARTY.md::TextFile::-1::1709177008::0::1::::<><>::
-::res://addons/godot-git-plugin/linux/::1709177008
-::res://addons/godot-git-plugin/macos/::1709177008
-::res://addons/godot-git-plugin/win64/::1709244000
-::res://Characters/::1709247885
-MainCharacter.png::CompressedTexture2D::8156519120331095213::1709247885::1709247894::1::::<><>::
-::res://Tilesets/::1709245621
-Room.png::CompressedTexture2D::6306912180723527522::1709245616::1709245621::1::::<><>::
