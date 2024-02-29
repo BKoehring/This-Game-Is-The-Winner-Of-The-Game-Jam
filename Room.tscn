@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://fdlqojtnuyek"]
+
+[ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="1_hfp2x"]
+[ext_resource type="Script" path="res://PlayerControl.gd" id="2_jn1xs"]
+[ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v6rj"]
+texture = ExtResource("1_hfp2x")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 32, -32, 32)
+
+[sub_resource type="TileSet" id="TileSet_clftx"]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_7v6rj")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jy84"]
+size = Vector2(64, 64)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_clftx")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 327681, 65536, 0, 327682, 65536, 0, 327683, 65536, 0, 327684, 65536, 0, 327685, 65536, 0, 327686, 65536, 0, 262150, 65536, 0, 196614, 65536, 0, 131078, 65536, 0, 65542, 65536, 0, 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 262148, 0, 0, 262147, 0, 0, 262146, 0, 0, 262145, 0, 0, 196609, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 196612, 0, 0, 196611, 0, 0, 196610, 0, 0)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(160, 160)
+script = ExtResource("2_jn1xs")
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("2_k7wb6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_4jy84")
