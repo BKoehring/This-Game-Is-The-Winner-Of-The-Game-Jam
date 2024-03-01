@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://fdlqojtnuyek"]
+[gd_scene load_steps=8 format=3 uid="uid://fdlqojtnuyek"]
 
 [ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="1_hfp2x"]
+[ext_resource type="Script" path="res://Room.gd" id="1_xq6xo"]
 [ext_resource type="Script" path="res://PlayerControl.gd" id="2_jn1xs"]
 [ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
 
@@ -24,6 +25,7 @@ sources/0 = SubResource("TileSetAtlasSource_7v6rj")
 size = Vector2(64, 64)
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_xq6xo")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_clftx")
