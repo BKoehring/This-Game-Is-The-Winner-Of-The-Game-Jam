@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://fdlqojtnuyek"]
+[gd_scene load_steps=9 format=3 uid="uid://fdlqojtnuyek"]
 
 [ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="1_hfp2x"]
-[ext_resource type="Script" path="res://Room.gd" id="1_xq6xo"]
-[ext_resource type="Script" path="res://PlayerControl.gd" id="2_jn1xs"]
+[ext_resource type="Script" path="res://src/Room.gd" id="1_xq6xo"]
+[ext_resource type="Script" path="res://src/PlayerControl.gd" id="2_jn1xs"]
 [ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
+[ext_resource type="Script" path="res://DialogTreeManager.gd" id="5_efbib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v6rj"]
 texture = ExtResource("1_hfp2x")
@@ -41,3 +42,6 @@ texture = ExtResource("2_k7wb6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_4jy84")
+
+[node name="DialogTreeManager" type="Node" parent="."]
+script = ExtResource("5_efbib")
