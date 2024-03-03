@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DialogTrees>
+  <DialogTree name="Attempt To Quit">
+	<DialogBox>
+	  <Dialog>Are you sure you want to quit?</Dialog>
+	  <Option>
+		<Text>Yes</Text>
+		<DialogBox>
+		  <Dialog>What if I make the game better?</Dialog>
+		  <Option>
+			<Text>Okay, sure</Text>
+			<Script>make_game_better</Script>
+		  </Option>
+		  <Option>
+			<Text>No, I don't want to play</Text>
+			<DialogBox>
+			  <Dialog>Please?</Dialog>
+			  <Option>
+				<Text>Fine</Text>
+				<Script>make_game_better</Script>
+			  </Option>
+			  <Option>
+				<Text>No</Text>
+				<DialogBox>
+				  <Dialog>How do you feel about dialog that gives the illusion of choice but always has the same outcome?</Dialog>
+				  <Option>
+					<Text>I love it!</Text>
+					<DialogBox>
+					  <Dialog>Great! Lets go ahead and just make the game better now</Dialog>
+					  <Option>
+						<Text>Ok!</Text>
+			<Script>make_game_better</Script>
+					  </Option>
+					</DialogBox>
+				  </Option>
+				  <Option>
+					<Text>I hate it</Text>
+					<DialogBox>
+					  <Dialog>Hmm, well I'll think about changing that later. Anyways, I'm going to make the game better, and you have no choice but to say ok</Dialog>
+					  <Option>
+						<Text>Ok</Text>
+						<Script>make_game_better</Script>
+					  </Option>
+					</DialogBox>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>No</Text>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+</DialogTrees>
