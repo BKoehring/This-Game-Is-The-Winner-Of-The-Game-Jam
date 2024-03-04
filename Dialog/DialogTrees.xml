@@ -54,4 +54,36 @@
 	  </Option>
 	</DialogBox>
   </DialogTree>
+	<DialogTree name="Better Game Quit">
+	<DialogBox>
+	  <Dialog>What? Did you not like the changes?</Dialog>
+	  <Option>
+		<Text>I did not</Text>
+		<DialogBox>
+		  <Dialog>Fine!</Dialog>
+		  <Option>
+			<Text>Thank you</Text>
+			<Script>quit_game</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text> I do</Text>
+		<DialogBox>
+		  <Dialog>Great! Please continue</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Save Game">
+	<DialogBox>
+	  <Dialog>The brilliant thing about making a game with nothing to do, is that there is nothing to save!</Dialog>
+			<Option>
+		<Text>Ok</Text>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
 </DialogTrees>

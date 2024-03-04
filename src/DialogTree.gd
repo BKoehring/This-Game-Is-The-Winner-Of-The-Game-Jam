@@ -34,5 +34,5 @@ func _button_pressed(args):
 			_create_dialog_box()
 		"script":
 			# run script
-			print("Run script: ", _current_node.GetDialogOptionArguments(option_index))
+			_current_node.GetDialogOptionArguments(option_index).emit()
 			get_parent().remove_child(self)

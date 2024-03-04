@@ -2,6 +2,9 @@ extends Node
 
 var _dialog_tree_dict = {}
 
+signal quit_game
+signal make_game_better
+
 func ParseDialogXml():
 	var parser = XMLParser.new()
 	
@@ -46,11 +49,23 @@ func _parse_dialog_option(parser: XMLParser, dialog_tree_node: DialogTreeNode):
 				"Script":
 					parser.read()
 					option_type = "script"
-					dialog_tree_node.AddDialogOption(option_text, option_type, parser.get_node_data())
+					dialog_tree_node.AddDialogOption(option_text, option_type, _find_signal(parser.get_node_data()))
 	if option_type == "end":
 		dialog_tree_node.AddDialogOption(option_text, option_type)
 
 func OpenDialogTree(tree_name: String):
 	var dialog_tree = _dialog_tree_dict[tree_name]
-	add_child(dialog_tree)
-	dialog_tree.OpenDialogTree()
+	var grid = $GridContainer
+	if dialog_tree.get_parent() == null:
+		var panel = Panel.new()
+		panel.add_child(dialog_tree)
+		grid.add_child(panel)
+		dialog_tree.OpenDialogTree()
+	#TODO handle more than one dialog box
+
+func _find_signal(signal_name: String):
+	match signal_name:
+		"make_game_better":
+			return make_game_better
+		"quit_game":
+			return quit_game

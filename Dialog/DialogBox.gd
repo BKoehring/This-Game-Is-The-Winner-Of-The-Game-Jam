@@ -1,12 +1,12 @@
-extends Node2D
+extends PanelContainer
 
 class button_props:
 	var text_prop: String
 	var action_prop: Callable
 	var args
 
-@onready var text_box = $PanelContainer/MarginContainer/VSplitContainer/RichTextLabel
-@onready var button_container = $PanelContainer/MarginContainer/VSplitContainer/HSplitContainer
+@onready var text_box = $MarginContainer/VSplitContainer/RichTextLabel
+@onready var button_container = $MarginContainer/VSplitContainer/HSplitContainer
 var text_prop: String
 var button_props_list: Array[button_props]
 
