@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://fdlqojtnuyek"]
 
 [ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="1_hfp2x"]
-[ext_resource type="Script" path="res://src/Room.gd" id="1_xq6xo"]
+[ext_resource type="Script" path="res://src/GameManager.gd" id="1_xq6xo"]
 [ext_resource type="Script" path="res://src/PlayerControl.gd" id="2_jn1xs"]
 [ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
-[ext_resource type="Script" path="res://DialogTreeManager.gd" id="5_efbib"]
+[ext_resource type="Script" path="res://src/DialogTreeManager.gd" id="5_efbib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v6rj"]
 texture = ExtResource("1_hfp2x")
@@ -45,3 +45,13 @@ shape = SubResource("RectangleShape2D_4jy84")
 
 [node name="DialogTreeManager" type="Node" parent="."]
 script = ExtResource("5_efbib")
+
+[node name="GridContainer" type="GridContainer" parent="DialogTreeManager"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="quit_override" from="CharacterBody2D" to="." method="_on_character_body_2d_quit_override"]
+[connection signal="make_game_better" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_make_game_better"]
+[connection signal="quit_game" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_quit_game"]

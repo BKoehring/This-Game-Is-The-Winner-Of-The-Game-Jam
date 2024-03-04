@@ -2,14 +2,12 @@
 
 [ext_resource type="Script" path="res://Dialog/DialogBox.gd" id="1_kjax2"]
 
-[node name="DialogBox" type="Node2D"]
-script = ExtResource("1_kjax2")
-
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer"]
 offset_right = 400.0
 offset_bottom = 127.0
+script = ExtResource("1_kjax2")
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="."]
 custom_minimum_size = Vector2(0, 132)
 layout_mode = 2
 theme_override_constants/margin_left = 10
@@ -17,14 +15,14 @@ theme_override_constants/margin_top = 10
 theme_override_constants/margin_right = 10
 theme_override_constants/margin_bottom = 10
 
-[node name="VSplitContainer" type="VSplitContainer" parent="PanelContainer/MarginContainer"]
+[node name="VSplitContainer" type="VSplitContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VSplitContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VSplitContainer"]
 custom_minimum_size = Vector2(400, 89)
 layout_mode = 2
 fit_content = true
 
-[node name="HSplitContainer" type="HSplitContainer" parent="PanelContainer/MarginContainer/VSplitContainer"]
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer/VSplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
