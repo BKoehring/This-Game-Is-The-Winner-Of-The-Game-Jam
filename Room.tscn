@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://fdlqojtnuyek"]
+[gd_scene load_steps=7 format=3 uid="uid://fdlqojtnuyek"]
 
 [ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="1_hfp2x"]
 [ext_resource type="Script" path="res://src/GameManager.gd" id="1_xq6xo"]
-[ext_resource type="Script" path="res://src/PlayerControl.gd" id="2_jn1xs"]
-[ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="2_k7wb6"]
+[ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Player.tscn" id="4_7gmai"]
 [ext_resource type="Script" path="res://src/DialogTreeManager.gd" id="5_efbib"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7v6rj"]
@@ -22,9 +21,6 @@ tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_7v6rj")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4jy84"]
-size = Vector2(64, 64)
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_xq6xo")
 
@@ -32,16 +28,6 @@ script = ExtResource("1_xq6xo")
 tile_set = SubResource("TileSet_clftx")
 format = 2
 layer_0/tile_data = PackedInt32Array(327685, 65536, 0, 327686, 0, 0, 262150, 0, 0, 196614, 0, 0, 131078, 0, 0, 65542, 65536, 0, 65541, 65536, 0, 131077, 65536, 0, 196613, 65536, 0, 262149, 65536, 0, 524294, 65536, 0, 524295, 65536, 0, 524296, 65536, 0, 524297, 65536, 0, 524298, 65536, 0, 524299, 65536, 0, 524293, 65536, 0, 524300, 65536, 0, 65548, 65536, 0, 131084, 65536, 0, 196620, 65536, 0, 262156, 65536, 0, 327692, 65536, 0, 393228, 65536, 0, 458764, 65536, 0, 65547, 65536, 0, 65546, 65536, 0, 65545, 65536, 0, 65544, 65536, 0, 65543, 65536, 0, 458757, 65536, 0, 393221, 65536, 0, 131079, 0, 0, 131080, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 458762, 0, 0, 458761, 0, 0, 458760, 0, 0, 458759, 0, 0, 458758, 0, 0, 393222, 0, 0, 196615, 0, 0, 196616, 0, 0, 196617, 0, 0, 196618, 0, 0, 262154, 0, 0, 327690, 0, 0, 393226, 0, 0, 393225, 0, 0, 393224, 0, 0, 393223, 0, 0, 327687, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 327689, 0, 0, 327688, 0, 0)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(544, 352)
-script = ExtResource("2_jn1xs")
-
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("2_k7wb6")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_4jy84")
 
 [node name="DialogTreeManager" type="Node" parent="."]
 script = ExtResource("5_efbib")
@@ -52,6 +38,9 @@ offset_bottom = 40.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[connection signal="quit_override" from="CharacterBody2D" to="." method="_on_character_body_2d_quit_override"]
+[node name="CharacterBody2D2" parent="." instance=ExtResource("4_7gmai")]
+position = Vector2(544, 352)
+
 [connection signal="make_game_better" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_make_game_better"]
 [connection signal="quit_game" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_quit_game"]
+[connection signal="quit_override" from="CharacterBody2D2" to="." method="_on_character_body_2d_quit_override"]
