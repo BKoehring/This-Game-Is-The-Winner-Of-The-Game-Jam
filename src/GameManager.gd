@@ -3,7 +3,6 @@ extends Node2D
 class_name GameManager
 
 @onready var _dialog_tree_manager = $DialogTreeManager
-var better_scene = preload("res://Scenes/Room2.tscn")
 var ready_to_quit = false
 
 func _notification(what):
@@ -22,17 +21,14 @@ func _ready():
 	_dialog_tree_manager.ParseDialogXml()
 
 func _input(event):
+	if event.is_action_released("quit"):
+		_quit_game()
 	if event.is_action_released("save"):
 		_dialog_tree_manager.OpenDialogTree("Save Game")
 
+func _quit_game():
+	ready_to_quit = true
+	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
+
 func _on_dialog_tree_manager_quit_game():
-	ready_to_quit = true
-	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
-
-func _on_character_body_2d_quit_override():
-	ready_to_quit = true
-	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
-
-func _on_dialog_tree_manager_make_game_better():
-	print("Signal make game better emitted")
-	get_tree().change_scene_to_packed(better_scene)
+	_quit_game()

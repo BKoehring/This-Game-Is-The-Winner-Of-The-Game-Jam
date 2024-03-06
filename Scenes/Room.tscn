@@ -27,4 +27,3 @@ position = Vector2(544, 352)
 
 [connection signal="make_game_better" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_make_game_better"]
 [connection signal="quit_game" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_quit_game"]
-[connection signal="quit_override" from="CharacterBody2D2" to="." method="_on_character_body_2d_quit_override"]
