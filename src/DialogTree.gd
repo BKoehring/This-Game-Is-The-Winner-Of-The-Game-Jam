@@ -1,4 +1,4 @@
-extends Node
+extends Panel
 
 class_name DialogTree
 

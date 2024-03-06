@@ -1,4 +1,4 @@
-extends PanelContainer
+extends Panel
 
 class button_props:
 	var text_prop: String
