@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxvpmwdp7gpso"]
+
+[ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Scenes/Player.tscn" id="2_mc3iv"]
+[ext_resource type="Script" path="res://src/DialogTreeManager.gd" id="3_lqywc"]
+
+[node name="BaseScene" type="Node2D"]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_mc3iv")]
+
+[node name="DialogTreeManager" type="Node" parent="."]
+script = ExtResource("3_lqywc")
+
+[node name="GridContainer" type="GridContainer" parent="DialogTreeManager"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[connection signal="quit_override" from="CharacterBody2D" to="." method="_on_character_body_2d_quit_override"]
+[connection signal="make_game_better" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_make_game_better"]
+[connection signal="quit_game" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_quit_game"]

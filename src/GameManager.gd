@@ -1,7 +1,9 @@
 extends Node2D
 
+class_name GameManager
+
 @onready var _dialog_tree_manager = $DialogTreeManager
-var better_scene = preload("res://Room2.tscn")
+var better_scene = preload("res://Scenes/Room2.tscn")
 var ready_to_quit = false
 
 func _notification(what):
@@ -9,8 +11,11 @@ func _notification(what):
 		if ready_to_quit:
 			get_tree().quit()
 		else:
-			_dialog_tree_manager.OpenDialogTree("Attempt To Quit")
+			_quit_attempt()
 
+func _quit_attempt():
+	pass
+	
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().set_auto_accept_quit(false)
