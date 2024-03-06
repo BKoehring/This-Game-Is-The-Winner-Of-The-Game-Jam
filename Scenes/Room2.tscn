@@ -1,54 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://jsn4vonu2wou"]
+[gd_scene load_steps=5 format=3 uid="uid://jsn4vonu2wou"]
 
-[ext_resource type="Script" path="res://src/Room2.gd" id="1_ttpqu"]
-[ext_resource type="Texture2D" uid="uid://dk3rtfumu3he8" path="res://TileSets/Room.png" id="2_ihnsu"]
-[ext_resource type="Texture2D" uid="uid://bi3n17y2q0rhb" path="res://Characters/MainCharacter.png" id="3_a8l5u"]
-[ext_resource type="Script" path="res://src/PlayerControl.gd" id="3_ouv0x"]
-[ext_resource type="Script" path="res://src/DialogTreeManager.gd" id="4_dot6u"]
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vl4p8"]
-texture = ExtResource("2_ihnsu")
-texture_region_size = Vector2i(64, 64)
-0:0/0 = 0
-0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-0:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0 = 0
-1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
-1:0/0/physics_layer_0/angular_velocity = 0.0
-1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, -32, 32, 32, 32, 32, -32)
-
-[sub_resource type="TileSet" id="TileSet_d7w5p"]
-tile_size = Vector2i(64, 64)
-physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_vl4p8")
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ej37u"]
-size = Vector2(64, 64)
+[ext_resource type="Script" path="res://src/Room2.gd" id="1_bnkpw"]
+[ext_resource type="TileSet" uid="uid://ceeprht6ct82e" path="res://TileSets/BaseTileSet.tres" id="2_f8std"]
+[ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Scenes/Player.tscn" id="3_34nxb"]
+[ext_resource type="PackedScene" uid="uid://bxvpmwdp7gpso" path="res://Scenes/base_scene.tscn" id="4_rlen8"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_ttpqu")
 
 [node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_d7w5p")
+tile_set = ExtResource("2_f8std")
 format = 2
 layer_0/tile_data = PackedInt32Array(0, 65536, 0, 1, 65536, 0, 2, 65536, 0, 3, 65536, 0, 4, 65536, 0, 5, 65536, 0, 6, 65536, 0, 7, 65536, 0, 8, 65536, 0, 9, 65536, 0, 10, 65536, 0, 11, 65536, 0, 12, 65536, 0, 13, 65536, 0, 14, 65536, 0, 15, 65536, 0, 16, 65536, 0, 17, 65536, 0, 65553, 65536, 0, 131089, 65536, 0, 196625, 65536, 0, 262161, 65536, 0, 327697, 65536, 0, 393233, 65536, 0, 458769, 65536, 0, 524305, 65536, 0, 589841, 65536, 0, 589840, 65536, 0, 589839, 65536, 0, 589838, 65536, 0, 589837, 65536, 0, 589836, 65536, 0, 589835, 65536, 0, 589834, 65536, 0, 589833, 65536, 0, 589832, 65536, 0, 589831, 65536, 0, 589830, 65536, 0, 589829, 65536, 0, 589828, 65536, 0, 589827, 65536, 0, 589826, 65536, 0, 589825, 65536, 0, 589824, 65536, 0, 524288, 65536, 0, 458752, 65536, 0, 393216, 65536, 0, 327680, 65536, 0, 262144, 65536, 0, 196608, 65536, 0, 131072, 65536, 0, 65536, 65536, 0, 262147, 0, 0, 196611, 0, 0, 131075, 0, 0, 65539, 0, 0, 65538, 0, 0, 65537, 0, 0, 131073, 0, 0, 196609, 0, 0, 262145, 0, 0, 327681, 0, 0, 393217, 0, 0, 458753, 0, 0, 524289, 0, 0, 524290, 0, 0, 458754, 0, 0, 393218, 0, 0, 327682, 0, 0, 262146, 0, 0, 196610, 0, 0, 131074, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 0, 0, 524291, 0, 0, 524292, 0, 0, 458756, 0, 0, 393220, 0, 0, 327684, 0, 0, 262148, 0, 0, 196612, 0, 0, 131076, 0, 0, 65540, 0, 0, 65541, 0, 0, 131077, 0, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 524294, 0, 0, 458758, 0, 0, 393222, 0, 0, 327686, 0, 0, 262150, 0, 0, 196614, 0, 0, 131078, 0, 0, 65542, 0, 0, 65543, 0, 0, 131079, 0, 0, 196615, 0, 0, 262151, 0, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 0, 0, 524296, 0, 0, 458760, 0, 0, 393224, 0, 0, 327688, 0, 0, 262152, 0, 0, 196616, 0, 0, 131080, 0, 0, 65544, 0, 0, 65545, 0, 0, 131081, 0, 0, 196617, 0, 0, 262153, 0, 0, 327689, 0, 0, 393225, 0, 0, 458761, 0, 0, 524297, 0, 0, 524298, 0, 0, 458762, 0, 0, 393226, 0, 0, 327690, 0, 0, 262154, 0, 0, 196618, 0, 0, 131082, 0, 0, 65546, 0, 0, 65547, 0, 0, 131083, 0, 0, 196619, 0, 0, 262155, 0, 0, 327691, 0, 0, 393227, 0, 0, 458763, 0, 0, 524299, 0, 0, 524300, 0, 0, 458764, 0, 0, 393228, 0, 0, 327692, 0, 0, 262156, 0, 0, 196620, 0, 0, 131084, 0, 0, 65548, 0, 0, 65549, 0, 0, 131085, 0, 0, 196621, 0, 0, 262157, 0, 0, 327693, 0, 0, 393229, 0, 0, 458765, 0, 0, 524301, 0, 0, 524302, 0, 0, 458766, 0, 0, 393230, 0, 0, 327694, 0, 0, 262158, 0, 0, 196622, 0, 0, 131086, 0, 0, 65550, 0, 0, 65551, 0, 0, 131087, 0, 0, 196623, 0, 0, 262159, 0, 0, 327695, 0, 0, 393231, 0, 0, 458767, 0, 0, 524303, 0, 0, 524304, 0, 0, 458768, 0, 0, 393232, 0, 0, 327696, 0, 0, 262160, 0, 0, 196624, 0, 0, 131088, 0, 0, 65552, 0, 0)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(544, 352)
-script = ExtResource("3_ouv0x")
+[node name="CharacterBody2D" parent="." instance=ExtResource("3_34nxb")]
+position = Vector2(416, 224)
 
-[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
-texture = ExtResource("3_a8l5u")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-shape = SubResource("RectangleShape2D_ej37u")
-
-[node name="DialogTreeManager" type="Node" parent="."]
-script = ExtResource("4_dot6u")
-
-[node name="GridContainer" type="GridContainer" parent="DialogTreeManager"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[connection signal="quit_override" from="CharacterBody2D" to="." method="_on_character_body_2d_quit_override"]
-[connection signal="quit_game" from="DialogTreeManager" to="." method="_on_dialog_tree_manager_quit_game"]
+[node name="BaseScene" parent="." instance=ExtResource("4_rlen8")]
+script = ExtResource("1_bnkpw")
