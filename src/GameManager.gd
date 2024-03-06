@@ -17,8 +17,13 @@ func _quit_attempt():
 	
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Triggers.quit_game.connect(_on_triggers_quit_game)
 	get_tree().set_auto_accept_quit(false)
 	_dialog_tree_manager.ParseDialogXml()
+	_after_ready()
+
+func _after_ready():
+	pass
 
 func _input(event):
 	if event.is_action_released("quit"):
@@ -30,5 +35,5 @@ func _quit_game():
 	ready_to_quit = true
 	get_tree().root.propagate_notification(NOTIFICATION_WM_CLOSE_REQUEST)
 
-func _on_dialog_tree_manager_quit_game():
+func _on_triggers_quit_game():
 	_quit_game()
