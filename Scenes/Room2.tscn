@@ -1,11 +1,11 @@
 [gd_scene load_steps=5 format=3 uid="uid://jsn4vonu2wou"]
 
 [ext_resource type="Script" path="res://src/Room2.gd" id="1_bnkpw"]
-[ext_resource type="TileSet" uid="uid://ceeprht6ct82e" path="res://TileSets/BaseTileSet.tres" id="2_f8std"]
+[ext_resource type="TileSet" path="res://TileSets/BaseTileSet.tres" id="2_f8std"]
 [ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Scenes/Player.tscn" id="3_34nxb"]
 [ext_resource type="PackedScene" uid="uid://bxvpmwdp7gpso" path="res://Scenes/base_scene.tscn" id="4_rlen8"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D2" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource("2_f8std")

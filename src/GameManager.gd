@@ -26,9 +26,9 @@ func _after_ready():
 	pass
 
 func _input(event):
-	if event.is_action_released("quit"):
+	if event.is_action_pressed("quit"):
 		_quit_game()
-	if event.is_action_released("save"):
+	if event.is_action_pressed("save"):
 		_dialog_tree_manager.OpenDialogTree("Save Game")
 
 func _quit_game():
