@@ -5,8 +5,8 @@ class button_props:
 	var action_prop: Callable
 	var args
 
-@onready var text_box = $MarginContainer/VSplitContainer/RichTextLabel
-@onready var button_container = $MarginContainer/VSplitContainer/HSplitContainer
+@onready var text_box = $MarginContainer/VBoxContainer/RichTextLabel
+@onready var button_container = $MarginContainer/VBoxContainer/HBoxContainer
 var text_prop: String
 var button_props_list: Array[button_props]
 

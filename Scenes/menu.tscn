@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://prknvb0rppbg"]
 
-[ext_resource type="Script" path="res://Scenes/menu.gd" id="1_dtbdw"]
+[ext_resource type="Script" path="res://src/menu.gd" id="1_3j48b"]
 
 [node name="Menu" type="CanvasLayer"]
-script = ExtResource("1_dtbdw")
+script = ExtResource("1_3j48b")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 offset_right = 1152.0

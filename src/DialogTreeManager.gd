@@ -14,6 +14,7 @@ func ParseDialogXml():
 		if parser.get_node_type() == XMLParser.NODE_ELEMENT && parser.get_node_name() == "DialogTree":
 			var dialog_tree = _dialog_tree_scene.instantiate()
 			var tree_name = parser.get_named_attribute_value("name")
+			print("Dialog Tree name: ", tree_name)
 			parser.read()
 			if parser.get_node_name() == "DialogBox":
 				dialog_tree.root = _parse_dialog_box(parser)
@@ -60,3 +61,9 @@ func OpenDialogTree(tree_name: String):
 	if dialog_tree.get_parent() == null:
 		grid.add_child(dialog_tree)
 		dialog_tree.OpenDialogTree()
+
+func CloseDialogTree(tree_name: String):
+	var dialog_tree = _dialog_tree_dict[tree_name]
+	var grid = $GridContainer
+	if dialog_tree.get_parent() == grid:
+		grid.remove_child(dialog_tree)
