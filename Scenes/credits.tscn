@@ -1,0 +1,60 @@
+[gd_scene load_steps=3 format=3 uid="uid://ikfx8m665gvy"]
+
+[ext_resource type="Script" path="res://Scenes/credits.gd" id="1_kwic7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8bqp4"]
+bg_color = Color(0.14902, 0.145098, 0.219608, 1)
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_kwic7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8bqp4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 40
+bbcode_enabled = true
+text = "[center]
+[b]I Made This \"Game\"[/b] 
+me, Brandon Koehring!
+
+[b]Thank You![/b]
+for quiting
+
+[b]Special Thanks[/b]
+to my wife and daughter for sticking with me
+throughout this entire ordeal. As I became a
+conduit for this monstrosity to spew from.
+I'm very lucky to have them.
+[/center]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/Panel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/Panel/VBoxContainer/CenterContainer"]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Quit"
+
+[connection signal="pressed" from="CanvasLayer/Panel/VBoxContainer/CenterContainer/Button" to="." method="_on_button_pressed"]

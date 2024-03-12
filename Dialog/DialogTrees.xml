@@ -29,7 +29,7 @@
 					  <Dialog>Great! Lets go ahead and just make the game better now</Dialog>
 					  <Option>
 						<Text>Ok!</Text>
-			<Script>make_game_better</Script>
+						<Script>make_game_better</Script>
 					  </Option>
 					</DialogBox>
 				  </Option>
@@ -54,21 +54,29 @@
 	  </Option>
 	</DialogBox>
   </DialogTree>
-	<DialogTree name="Better Game Quit">
+  <DialogTree name="Better Game Quit">
 	<DialogBox>
-	  <Dialog>What? Did you not like the changes?</Dialog>
+	  <Dialog>What? The map is bigger. Everyone loves a bigger map. Are you telling me you don't like a bigger map?</Dialog>
 	  <Option>
-		<Text>I did not</Text>
+		<Text>There is still nothing to do</Text>
 		<DialogBox>
-		  <Dialog>Fine!</Dialog>
+		  <Dialog>Okay, okay, I have an idea. What do you like?</Dialog>
 		  <Option>
-			<Text>Thank you</Text>
-			<Script>quit_game</Script>
+			<Text>Open world</Text>
+			<Script>open_world</Script>
+		  </Option>
+		  <Option>
+			<Text>Better Visuals</Text>
+			<Script>better_visuals</Script>
+		  </Option>
+		  <Option>
+			<Text>Something to do...</Text>
+			<Script>something_to_do</Script>
 		  </Option>
 		</DialogBox>
 	  </Option>
 	  <Option>
-		<Text> I do</Text>
+		<Text>No, I love the bigger map</Text>
 		<DialogBox>
 		  <Dialog>Great! Please continue</Dialog>
 		  <Option>
@@ -81,8 +89,464 @@
   <DialogTree name="Save Game">
 	<DialogBox>
 	  <Dialog>The brilliant thing about making a game with nothing to do, is that there is nothing to save!</Dialog>
-			<Option>
+	  <Option>
 		<Text>Ok</Text>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Quit Game">
+	<DialogBox>
+	  <Dialog>Alright, alright, you can quit... quiter, but first lets take a moment to remember all the good times we had.</Dialog>
+	  <Option>
+		<Text>Ok</Text>
+		<Script>take_a_moment</Script>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Can I Quit Now">
+	<DialogBox>
+	  <Dialog>...</Dialog>
+	  <Option>
+		<Text>Can I quit now?</Text>
+		<Script>can_i_quit_now</Script>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Cut Off Moment">
+	<DialogBox>
+	  <Dialog>I said take a MOMENT! Jeeze... There's no way you went through all those good times that fast.</Dialog>
+	  <Option>
+		<Text>What good times?</Text>
+		<DialogBox>
+		  <Dialog> -_- Hurtful...</Dialog>
+		  <Option>
+			<Text>...</Text>
+			<Script>hurtful</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>I think very fast</Text>
+		<DialogBox>
+		  <Dialog>Hmmm... Okay Bye!</Dialog>
+		  <Option>
+			<Text>Bye</Text>
+			<Script>quit_game</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Full Moment">
+	<DialogBox>
+	  <Dialog>Thank you, Bye!</Dialog>
+	  <Option>
+		<Text>Bye</Text>
+		<Script>quit_game</Script>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Leaving Area">
+	<DialogBox>
+	  <Dialog>Whoa there, friend. Why don't you go back and checkout that starting area more?</Dialog>
+	  <Option>
+		<Text>Ok</Text>
+	  </Option>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>There might be something really cool</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+			<Script>something_cool</Script>
+		  </Option>
+		  <Option>
+			<Text>I don't believe you</Text>
+			<DialogBox>
+			  <Dialog>Please go back?</Dialog>
+			  <Option>
+				<Text>Ok</Text>
+			  </Option>
+			  <Option>
+				<Text>No</Text>
+				<Script>please_go_back</Script>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Left Area">
+	<DialogBox>
+	  <Dialog>Well this is embarrassing. Look, making an open world takes a long time. I ain't got that kind of time. Could you find it in your heart to forgive me?</Dialog>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>Wow... maybe I don't want you playing my game anyways. Go ahead quit, see if I care.</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+	  <!--Check if this script does anything-->
+			<Script>quit_i_dont_care</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>Yes</Text>
+		<DialogBox>
+		  <Dialog>I always knew you were a good person. Well enjoy the open world!</Dialog>
+		  <Option>
+			<Text>...</Text>
+		  </Option>
+		  <Option>
+			<Text>Thank you</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Please Go Back">
+	<DialogBox>
+	  <Dialog>Please go back.</Dialog>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>Please.</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+		  </Option>
+		  <Option>
+			<Text>No</Text>
+			<Script>please_go_back</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>Ok</Text>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Pretty Cool">
+	<DialogBox>
+	  <Dialog>Pretty cool huh?</Dialog>
+	  <Option>
+		<Text>Totally!</Text>
+	  </Option>
+	  <Option>
+		<Text>Absolutely Not!</Text>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Oh You Want To Quit">
+	<DialogBox>
+	  <Dialog>Oh what's that? You want to quit?</Dialog>
+	  <Option>
+		<Text>Yes</Text>
+		<DialogBox>
+		  <Dialog>Hmm, I don't know if I should let you anymore. You weren't very nice to me.</Dialog>
+		  <Option>
+			<Text>Please?</Text>
+			<DialogBox>
+			  <Dialog>Well since you said please I guess I'll let it slide. Go ahead.</Dialog>
+			  <Option>
+				<Text>Quit</Text>
+				<Script>quit_game</Script>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>Let me quit damn you!</Text>
+			<DialogBox>
+			  <Dialog>No</Dialog>
+			  <Option>
+				<Text>...</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>Hmm... well maybe I should make you quit anyways. You weren't very nice to me.</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+			<DialogBox>
+			  <Dialog>You sound a little to eager to quit. Are you trying to trick me?</Dialog>
+			  <Option>
+				<Text>No</Text>
+				<DialogBox>
+				  <Dialog>Hmm... How can I trust you?</Dialog>
+				  <Option>
+					<Text>I don't know</Text>
+					<DialogBox>
+					  <Dialog>Good point, no one ever really knows who they can trust. How do I know I can even trust myself? Can I trust myself?</Dialog>
+					  <Option>
+						<Text>No</Text>
+					  </Option>
+					  <Option>
+						<Text>Yes</Text>
+					  </Option>
+					</DialogBox>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			  <Option>
+				<Text>Yes</Text>
+				<DialogBox>
+				  <Dialog>Well I appreciate your honesty. Go ahead you deserve it champ.</Dialog>
+				  <Option>
+					<Text>Quit</Text>
+					<Script>quit_game</Script>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>No please don't</Text>
+			<DialogBox>
+			  <Dialog>Nope can't change my mind now.</Dialog>
+			  <Option>
+				<Text>No anything but that</Text>
+				<Script>quit_game</Script>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Something To Do">
+	<DialogBox>
+	  <Dialog>Alright, I've got it. Go look for some papers I lost. They've got to be around here somewhere.</Dialog>
+	  <Option>
+		<Text>Ok</Text>
+	  </Option>
+	  <Option>
+		<Text>You want me to go on a fetch quest?</Text>
+		<DialogBox>
+		  <Dialog>Yeah!</Dialog>
+		  <Option>
+			<Text>Your idea of a fun game is running errands for you?</Text>
+			<DialogBox>
+			  <Dialog>Hell yeah! It's a win win. You get something to do like you've been desperately begging for, and someone else gets my work done for me. Everyone's happy!</Dialog>
+			  <Option>
+				<Text>I'm not happy</Text>
+				<DialogBox>
+				  <Dialog>Too bad!</Dialog>
+				  <Option>
+					<Text>...</Text>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			  <Option>
+				<Text>Ok</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>Ok</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Found Papers">
+	<DialogBox>
+	  <Dialog>Hey you did it. You found my TODO list.</Dialog>
+	  <Option>
+		<Text>It's a to do list?</Text>
+		<DialogBox>
+		  <Dialog>Yeah, its got all the features I was going to add to the game. I've been looking for it since... Well since I started making the game.</Dialog>
+		  <Option>
+			<Text>Like what?</Text>
+			<DialogBox>
+			  <Dialog>Here take a look for yourself. (You see a pad of paper with nothing but "don't add chromatic aberration" written all over every single page. Each one getting less and less legible and becoming much more of a scribble. By the last page you can just barely make out the words.)</Dialog>
+			  <Option>
+				<Text>Very cool</Text>
+			  </Option>
+			  <Option>
+				<Text>(Hand back paper, say nothing)</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>Ok</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>Can I just quit the game now?</Text>
+		<DialogBox>
+		  <Dialog>Alright, go ahead buddy.</Dialog>
+		  <Option>
+			<Text>Quit</Text>
+			<Script>final_quit</Script>
+		  </Option>
+		  <Option>
+			<Text>Actually I'd like to play some more</Text>
+			<DialogBox>
+			  <Dialog>Really!?</Dialog>
+			  <Option>
+				<Text>No</Text>
+				<Script>quit_game</Script>
+			  </Option>
+			  <Option>
+				<Text>Yeah</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Better Visuals Quit">
+	<DialogBox>
+	  <Dialog>You want to quit this beautiful game?</Dialog>
+	  <Option>
+		<Text>Yes</Text>
+		<DialogBox>
+		  <Dialog>But look at that lighting. Should I add more bloom, specularity, crank up the magnitude of the normal maps? The more the better am I right?</Dialog>
+		  <Option>
+			<Text>I prefer subtlety</Text>
+			<DialogBox>
+			  <!--If time permits insert here dialog about how visual effects double a games rating with a dialog option of "doubling 0 is still 0"-->
+			  <Dialog> -_- You would. Fine would you prefer open world or something to do?</Dialog>
+			  <Option>
+				<Text>Open world</Text>
+				<Script>open_world</Script>
+			  </Option>
+			  <Option>
+				<Text>Something to do...</Text>
+				<Script>something_to_do</Script>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>Totally</Text>
+			<DialogBox>
+			  <Dialog>Hell yeah dude. Now what did you want?</Dialog>
+			  <Option>
+				<Text>To quit</Text>
+				<DialogBox>
+				  <Dialog>Right, hmm... Hows about you try open world or something to do</Dialog>
+				  <Option>
+					<Text>Open world</Text>
+					<Script>open_world</Script>
+				  </Option>
+				  <Option>
+					<Text>Something to do...</Text>
+					<Script>something_to_do</Script>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			  <Option>
+				<Text>To tell you how great the visuals are</Text>
+				<DialogBox>
+				  <Dialog>Right on friendo</Dialog>
+				  <Option>
+					<Text>Right on</Text>
+				  </Option>
+				  <Option>
+					<Text>But can I quit now?</Text>
+					<DialogBox>
+					  <Dialog>Nope. Hows about you try open world or something to do</Dialog>
+					  <Option>
+						<Text>Open world</Text>
+						<Script>open_world</Script>
+					  </Option>
+					  <Option>
+						<Text>Something to do...</Text>
+						<Script>something_to_do</Script>
+					  </Option>
+					</DialogBox>
+				  </Option>
+				</DialogBox>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>Good... Well don't stop playing now.</Dialog>
+		  <Option>
+			<Text>...</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Open World Quit">
+	<DialogBox>
+	  <Dialog>You really want to quit this amazing open world experience?</Dialog>
+	  <Option>
+		<Text>Yes</Text>
+		<DialogBox>
+		  <Dialog>There is just no pleasing you is there? How 'bout we spice things up a bit. Better visuals or... something to do?</Dialog>
+		  <Option>
+			<Text>Better Visuals</Text>
+			<Script>better_visuals</Script>
+		  </Option>
+		  <Option>
+			<Text>Something to do...</Text>
+			<Script>something_to_do</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>No</Text>
+		<DialogBox>
+		  <Dialog>I know right, how could you even consider ending such an exhilarating experience such as this? Please, continue.</Dialog>
+		  <Option>
+			<Text>Ok</Text>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	</DialogBox>
+  </DialogTree>
+  <DialogTree name="Something To Do Quit">
+	<DialogBox>
+	  <Dialog>Did you find my papers?</Dialog>
+	  <Option>
+		<Text>No, I looked everywhere</Text>
+		<DialogBox>
+		  <Dialog>Well you didn't look hard enough. Maybe try a different level. Open world or better visuals?</Dialog>
+		  <Option>
+			<Text>Open world</Text>
+			<Script>open_world</Script>
+		  </Option>
+		  <Option>
+			<Text>Better Visuals</Text>
+			<Script>better_visuals</Script>
+		  </Option>
+		</DialogBox>
+	  </Option>
+	  <Option>
+		<Text>Yes, now let me leave</Text>
+		<DialogBox>
+		  <Dialog>Well what are you waiting for? Hand them over.</Dialog>
+		  <Option>
+			<Text>I lied</Text>
+			<DialogBox>
+			  <Dialog>Well thanks for being honest, now keep looking.</Dialog>
+			  <Option>
+				<Text>Ok</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		  <Option>
+			<Text>No</Text>
+			<DialogBox>
+			  <Dialog>Well you can't quit until you find them.</Dialog>
+			  <Option>
+				<Text>Ok</Text>
+			  </Option>
+			</DialogBox>
+		  </Option>
+		</DialogBox>
 	  </Option>
 	</DialogBox>
   </DialogTree>

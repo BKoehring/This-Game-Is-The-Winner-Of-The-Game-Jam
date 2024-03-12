@@ -28,11 +28,10 @@ func _button_pressed(args):
 	match _current_node.GetDialogOptionType(option_index):
 		"end":
 			get_parent().remove_child(self)
-			print("no change")
 		"dialog":
 			_current_node = _current_node.GetNode(_current_node.GetDialogOptionArguments(option_index))
 			_create_dialog_box()
 		"script":
 			# run script
-			_current_node.GetDialogOptionArguments(option_index).emit()
 			get_parent().remove_child(self)
+			_current_node.GetDialogOptionArguments(option_index).emit()
