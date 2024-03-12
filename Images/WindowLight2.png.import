@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtnj6056i3sy8"
-path="res://.godot/imported/Papers.png-d3b1fc54a3c8164bd53b5c6e53b8c6de.ctex"
+uid="uid://cnj87qpnmsee6"
+path="res://.godot/imported/WindowLight2.png-7781c53042991b2b3059fee946727389.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Papers.png"
-dest_files=["res://.godot/imported/Papers.png-d3b1fc54a3c8164bd53b5c6e53b8c6de.ctex"]
+source_file="res://Images/WindowLight2.png"
+dest_files=["res://.godot/imported/WindowLight2.png-7781c53042991b2b3059fee946727389.ctex"]
 
 [params]
 

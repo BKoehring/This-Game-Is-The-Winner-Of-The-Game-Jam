@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2tpwcl6pujco"
-path="res://.godot/imported/MenuButtonHover.png-3266c0bc5c86287e78b85767c35a573b.ctex"
+uid="uid://b374khi4ot1mm"
+path="res://.godot/imported/WindowLight.png-cb8d6933694d05bd2c60c7374a90b15c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://MenuButtonHover.png"
-dest_files=["res://.godot/imported/MenuButtonHover.png-3266c0bc5c86287e78b85767c35a573b.ctex"]
+source_file="res://Images/WindowLight.png"
+dest_files=["res://.godot/imported/WindowLight.png-cb8d6933694d05bd2c60c7374a90b15c.ctex"]
 
 [params]
 

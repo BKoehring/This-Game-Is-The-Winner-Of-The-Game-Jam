@@ -14,7 +14,7 @@ config/name="A Really Good Game"
 config/version="1.0"
 run/main_scene="res://Scenes/Room1.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://GameIcon.png"
+config/icon="res://Images/GameIcon.png"
 
 [autoload]
 

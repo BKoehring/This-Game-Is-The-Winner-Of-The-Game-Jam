@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fcif0n84k683"
-path="res://.godot/imported/GameIcon.png-2898ddd711c7fdff1741d9ab9b391647.ctex"
+uid="uid://cs0b44csuxwcv"
+path="res://.godot/imported/RoomShadowLight.png-0aa59bd0f290e3b292b762125b33d6cd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameIcon.png"
-dest_files=["res://.godot/imported/GameIcon.png-2898ddd711c7fdff1741d9ab9b391647.ctex"]
+source_file="res://Images/RoomShadowLight.png"
+dest_files=["res://.godot/imported/RoomShadowLight.png-0aa59bd0f290e3b292b762125b33d6cd.ctex"]
 
 [params]
 

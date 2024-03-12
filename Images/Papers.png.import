@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs0b44csuxwcv"
-path="res://.godot/imported/RoomShadowLight.png-dd3cffe0e5a746a82309b81d277f99df.ctex"
+uid="uid://dtnj6056i3sy8"
+path="res://.godot/imported/Papers.png-6cf7e7e790126b9413fd27cb1ccfe569.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://RoomShadowLight.png"
-dest_files=["res://.godot/imported/RoomShadowLight.png-dd3cffe0e5a746a82309b81d277f99df.ctex"]
+source_file="res://Images/Papers.png"
+dest_files=["res://.godot/imported/Papers.png-6cf7e7e790126b9413fd27cb1ccfe569.ctex"]
 
 [params]
 

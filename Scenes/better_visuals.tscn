@@ -5,8 +5,8 @@
 [ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Scenes/Player.tscn" id="3_s83mi"]
 [ext_resource type="Script" path="res://src/better_visuals.gd" id="3_syiiw"]
 [ext_resource type="Texture2D" uid="uid://c2as1vlisjymm" path="res://Characters/BetterCharacter.png" id="5_d6mws"]
-[ext_resource type="Texture2D" uid="uid://b374khi4ot1mm" path="res://WindowLight.png" id="6_6e0n1"]
-[ext_resource type="Texture2D" uid="uid://cs0b44csuxwcv" path="res://RoomShadowLight.png" id="6_o7ata"]
+[ext_resource type="Texture2D" uid="uid://b374khi4ot1mm" path="res://Images/WindowLight.png" id="6_6e0n1"]
+[ext_resource type="Texture2D" uid="uid://cs0b44csuxwcv" path="res://Images/RoomShadowLight.png" id="6_o7ata"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ui6e8"]
 texture = ExtResource("1_ilqcy")

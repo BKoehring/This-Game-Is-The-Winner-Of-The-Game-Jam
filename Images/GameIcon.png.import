@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnj87qpnmsee6"
-path="res://.godot/imported/WindowLight2.png-9867d3a52b52fd60cef64d6ceb12f3b4.ctex"
+uid="uid://fcif0n84k683"
+path="res://.godot/imported/GameIcon.png-65b29a92e7f3098ab6ec318283a36dd2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://WindowLight2.png"
-dest_files=["res://.godot/imported/WindowLight2.png-9867d3a52b52fd60cef64d6ceb12f3b4.ctex"]
+source_file="res://Images/GameIcon.png"
+dest_files=["res://.godot/imported/GameIcon.png-65b29a92e7f3098ab6ec318283a36dd2.ctex"]
 
 [params]
 

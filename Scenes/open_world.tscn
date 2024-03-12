@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://src/open_world_base_node.gd" id="1_080ce"]
 [ext_resource type="TileSet" uid="uid://durx8iiivf8yq" path="res://TileSets/open_world.tres" id="1_ke3qe"]
 [ext_resource type="PackedScene" uid="uid://bxvpmwdp7gpso" path="res://Scenes/base_scene.tscn" id="2_lnqta"]
-[ext_resource type="Texture2D" uid="uid://c6m3usiyxal7q" path="res://CoolThing.png" id="2_xbks0"]
 [ext_resource type="Script" path="res://src/openworld.gd" id="3_jrvlc"]
 [ext_resource type="PackedScene" uid="uid://82won0nixlfi" path="res://Scenes/Player.tscn" id="4_fphre"]
 [ext_resource type="Script" path="res://src/CoolThing.gd" id="6_j64gk"]
-[ext_resource type="Texture2D" uid="uid://dtnj6056i3sy8" path="res://Papers.png" id="7_1td0g"]
+[ext_resource type="Texture2D" uid="uid://dtnj6056i3sy8" path="res://Images/Papers.png" id="7_1td0g"]
+[ext_resource type="Texture2D" uid="uid://c6m3usiyxal7q" path="res://Characters/CoolThing.png" id="8_rilxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sp2r4"]
 size = Vector2(64, 64)
@@ -70,7 +70,7 @@ position = Vector2(0, 48)
 shape = SubResource("RectangleShape2D_7m5pm")
 
 [node name="Sprite2D" type="Sprite2D" parent="CoolThing"]
-texture = ExtResource("2_xbks0")
+texture = ExtResource("8_rilxk")
 
 [node name="Cool Thing Area" type="Area2D" parent="CoolThing"]
 
